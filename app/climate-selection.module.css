@@ -34,7 +34,7 @@
   max-width: 480px;
   margin: 28px 0 0;
   color: #bdcbd3;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
 }
 
@@ -47,7 +47,7 @@
   margin-top: 28px;
   padding-block: 10px;
   border-bottom: 1px solid #7795a6;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
   transition: color 160ms ease, border-color 160ms ease;
@@ -90,7 +90,7 @@
 .factor p {
   margin: 10px 0 0;
   color: #bdcbd3;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
 }
 

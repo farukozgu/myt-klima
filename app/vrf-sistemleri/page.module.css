@@ -1,7 +1,7 @@
 .hero { padding-block: clamp(64px, 7vw, 98px) clamp(68px, 7vw, 94px); background: var(--background); }
 .eyebrow { margin: 0 0 18px; color: var(--primary); font-size: 12px; font-weight: 600; letter-spacing: .105em; line-height: 1.5; }
 .hero h1, .explainer h2, .sectionIntro h2, .units h2, .faq h2, .finalCta h2 { margin: 0; color: var(--navy); font-weight: 600; letter-spacing: -.05em; line-height: 1.1; text-wrap: balance; }
-.hero h1 { max-width: 800px; font-size: clamp(43px, 5.1vw, 68px); }
+.hero h1 { max-width: 800px; font-size: clamp(43px, 5.1vw, 68px); font-weight: 700; }
 .heroCopy { max-width: 720px; margin: 24px 0; color: var(--muted); font-size: 17px; line-height: 1.75; }
 .serviceLine { margin: 17px 0 0; color: #53636d; font-size: 14px; font-weight: 500; line-height: 1.7; }
 .serviceLine span { padding-inline: 6px; color: var(--primary); }
@@ -11,7 +11,7 @@
 .diagramFigure, .unitFigure { margin: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: #edf1f0; }
 .diagramFigure img { display: block; width: 100%; height: auto; object-fit: contain; }
 .explainerCopy { max-width: 540px; }
-.explainer h2, .sectionIntro h2, .units h2, .faq h2, .finalCta h2 { font-size: clamp(32px, 3.4vw, 46px); }
+.explainer h2, .sectionIntro h2, .units h2, .faq h2, .finalCta h2 { font-size: clamp(34px, 3.4vw, 48px); }
 .explainerCopy > p:not(.eyebrow):not(.imageNote) { margin: 20px 0 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
 .imageNote { margin: 24px 0 0; padding-left: 16px; border-left: 2px solid #8cb8ca; color: #526771; font-size: 13px; line-height: 1.65; }
 
@@ -23,7 +23,7 @@
 .benefitGrid > div { min-height: 156px; padding: 28px clamp(22px, 4vw, 48px) 28px 0; border-bottom: 1px solid rgb(255 255 255 / 25%); }
 .benefitGrid > div:nth-child(even) { padding-right: 0; padding-left: clamp(22px, 4vw, 48px); border-left: 1px solid rgb(255 255 255 / 25%); }
 .benefitGrid dt { font-size: 14px; font-weight: 700; letter-spacing: .025em; line-height: 1.45; }
-.benefitGrid dd { max-width: 420px; margin: 13px 0 0; color: #c5d1d7; font-size: 15px; line-height: 1.72; }
+.benefitGrid dd { max-width: 420px; margin: 13px 0 0; color: #c5d1d7; font-size: 16px; line-height: 1.72; }
 .benefitNote { max-width: 720px; margin: 23px 0 0; color: #c5d1d7; font-size: 13px; line-height: 1.7; }
 
 .unitFigure img { display: block; width: 100%; height: auto; object-fit: cover; }
@@ -31,7 +31,7 @@
 .unitList { margin: 31px 0 0; border-top: 1px solid var(--border); }
 .unitList > div { padding: 20px 0; border-bottom: 1px solid var(--border); }
 .unitList dt { color: var(--navy); font-size: 14px; font-weight: 700; letter-spacing: .04em; line-height: 1.5; }
-.unitList dd { margin: 7px 0 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
+.unitList dd { margin: 7px 0 0; color: var(--muted); font-size: 16px; line-height: 1.7; }
 
 .process { padding-block: clamp(70px, 7vw, 92px); background: #eef3f4; }
 .steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; padding: 0; border-top: 1px solid #cbd7da; border-bottom: 1px solid #cbd7da; list-style: none; }
@@ -46,9 +46,9 @@
 .accordion { border-top: 1px solid var(--border); }
 .accordionItem { border-bottom: 1px solid var(--border); }
 .accordionItem h3 { margin: 0; }
-.accordionButton { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 24px; padding: 19px 0; border: 0; background: transparent; color: var(--navy); cursor: pointer; font: inherit; font-size: 16px; font-weight: 600; line-height: 1.5; text-align: left; }
+.accordionButton { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 24px; padding: 19px 0; border: 0; background: transparent; color: var(--navy); cursor: pointer; font: inherit; font-size: 18px; font-weight: 600; line-height: 1.5; text-align: left; }
 .accordionButton > span:last-child { color: var(--primary); font-size: 22px; font-weight: 400; }
-.accordionItem p { max-width: 650px; margin: 0 32px 20px 0; color: var(--muted); font-size: 15px; line-height: 1.72; }
+.accordionItem p { max-width: 650px; margin: 0 32px 20px 0; color: var(--muted); font-size: 16px; line-height: 1.72; }
 
 .finalCta { padding-block: clamp(74px, 8vw, 104px); background: var(--navy); color: #f7f8f6; }
 .finalGrid { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); }
@@ -79,12 +79,12 @@
 
 @media (max-width: 560px) {
   .hero { padding-block: 53px 66px; }
-  .eyebrow { margin-bottom: 17px; font-size: 10px; }
-  .hero h1 { font-size: clamp(38px, 10vw, 47px); }
+  .eyebrow { margin-bottom: 17px; font-size: 12px; }
+  .hero h1 { font-size: clamp(40px, 10vw, 49px); }
   .heroCopy { margin-block: 21px; font-size: 16px; line-height: 1.7; }
   .serviceLine { font-size: 13px; }
   .explainer, .benefits, .units, .faq, .finalCta, .process { padding-block: 64px; }
-  .explainer h2, .sectionIntro h2, .units h2, .faq h2, .finalCta h2 { font-size: 31px; }
+  .explainer h2, .sectionIntro h2, .units h2, .faq h2, .finalCta h2 { font-size: 33px; }
   .sectionIntro { margin-bottom: 38px; }
   .steps { grid-template-columns: minmax(0, 1fr); }
   .steps li, .steps li + li, .steps li:nth-child(3), .steps li:nth-child(5) { min-height: 0; padding: 22px 0; border-left: 0; border-top: 1px solid #cbd7da; }

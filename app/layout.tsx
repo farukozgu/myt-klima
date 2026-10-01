@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import MotionRoot from "./motion-root";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const outfit = Outfit({
   weight: ["400", "500", "600", "700"],
-  subsets: ["latin-ext"],
-  variable: "--font-plus-jakarta-sans",
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-outfit",
   display: "swap",
 });
 
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="tr"
-      className={`${plusJakartaSans.variable} h-full antialiased`}
+      className={`${outfit.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col"><MotionRoot />{children}</body>
     </html>

@@ -30,7 +30,7 @@
   max-width: 390px;
   margin: 24px 0 0;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
 }
 .accordion { border-top: 1px solid var(--border); }
@@ -48,7 +48,7 @@
   background: transparent;
   color: var(--navy);
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -.02em;
   line-height: 1.45;
   text-align: left;
@@ -71,7 +71,7 @@
   margin: 0;
   padding: 0 44px 28px 4px;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
 }
 @media (hover: hover) {
@@ -85,6 +85,6 @@
 }
 @media (max-width: 480px) {
   .section { padding-block: 72px; }
-  .trigger { gap: 16px; font-size: 18px; }
+  .trigger { gap: 16px; font-size: 19px; }
   .answer { padding-right: 4px; }
 }
