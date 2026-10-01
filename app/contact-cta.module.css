@@ -1,0 +1,99 @@
+.section {
+  padding-block: 100px;
+  background: var(--navy);
+  color: #f7f8f6;
+  scroll-margin-top: 76px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+  align-items: center;
+  gap: clamp(48px, 6vw, 88px);
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+  color: #9cc8de;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  line-height: 1.5;
+}
+
+.copy h2 {
+  max-width: 670px;
+  margin: 0;
+  font-size: clamp(34px, 3.3vw, 46px);
+  font-weight: 600;
+  letter-spacing: -.04em;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+.description {
+  max-width: 590px;
+  margin: 22px 0 0;
+  color: #c5d1d7;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.actions {
+  min-width: 0;
+  padding: 12px 0 12px clamp(28px, 3vw, 48px);
+  border-left: 2px solid #5da1c3;
+}
+
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+.buttons a {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 19px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+.buttons a:focus-visible { outline: 3px solid #9cc8de; outline-offset: 4px; }
+.buttons svg { width: 21px; height: 21px; flex: 0 0 21px; }
+.buttons .whatsapp { background: #147d49; }
+.buttons .whatsapp:hover { background: #106b3e; }
+.buttons .phone { border-color: #7893a2; background: transparent; }
+.buttons .phone:hover { border-color: #c5d1d7; background: rgb(255 255 255 / 5%); }
+.contactDetails {
+  margin: 16px 0 0;
+  color: #c5d1d7;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.contactDetails a { color: #f7f8f6; }
+.contactDetails a:hover { color: #9cc8de; }
+.contactDetails a:focus-visible { outline: 2px solid #9cc8de; outline-offset: 3px; }
+.microcopy {
+  margin: 12px 0 0;
+  color: #c5d1d7;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .section { padding-block: 80px; }
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .actions { max-width: 620px; }
+}
+
+@media (max-width: 560px) {
+  .section { padding-block: 72px; }
+  .copy h2 { font-size: clamp(32px, 8.5vw, 40px); }
+  .actions { padding: 0; border-left: 0; }
+  .buttons { flex-direction: column; }
+  .buttons a { width: 100%; }
+}

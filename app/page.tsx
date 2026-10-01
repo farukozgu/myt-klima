@@ -1,69 +1,95 @@
 import Image from "next/image";
+import SiteHeader from "./site-header";
+import ServicesSection from "./services-section";
+import ClimateSelection from "./climate-selection";
+import InstallationSection from "./installation-section";
+import CommercialSection from "./commercial-section";
+import FaqSection from "./faq-section";
+import ContactCta from "./contact-cta";
+import SiteFooter from "./site-footer";
+import WhatsAppIcon from "./whatsapp-icon";
+import { getWhatsAppHref } from "./business";
+
+const quoteMessage = "Merhaba Erhan Bey, klima için bilgi ve teklif almak istiyorum.";
+
+const services = [
+  "Klima Satışı",
+  "Montaj",
+  "Bakım",
+  "Teknik Servis",
+  "VRF Sistemleri",
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+      <SiteHeader />
+      <main id="ana-sayfa">
+        <section className="hero" aria-labelledby="hero-title">
+          <div className="hero-intro container">
+            <div className="hero-copy">
+              <p className="eyebrow">MYT KLİMA · İKLİMLENDİRME SİSTEMLERİ</p>
+              <h1 id="hero-title">
+                Doğru klima.<br />
+                <span>Doğru montaj.</span>
+              </h1>
+              <p className="hero-description">
+                Eviniz veya iş yeriniz için uygun klimayı belirliyor, montajını
+                yapıyor ve ihtiyaç halinde teknik desteğini sürdürüyoruz.
+              </p>
+              <div className="hero-actions">
+                <a
+                  className="button button-primary"
+                  href={getWhatsAppHref(quoteMessage)}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Teklif Al
+                </a>
+                <a
+                  className="button button-secondary"
+                  href={getWhatsAppHref(quoteMessage)}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <WhatsAppIcon className="whatsapp-icon" />
+                  WhatsApp’tan Yaz
+                </a>
+              </div>
+              <p className="service-line">
+                Klima satışı, montaj, bakım ve teknik servis.
+              </p>
+            </div>
+          </div>
+
+          <div className="hero-media container">
             <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+              className="hero-image"
+              src="/images/myt-klima-hero-technician.png"
+              alt="Duvar tipi klimaya montaj yapan teknik personel"
+              width={2132}
+              height={738}
+              priority
+              sizes="(max-width: 680px) calc(100vw - 40px), (max-width: 1020px) calc(100vw - 48px), 1240px"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          </div>
+
+          <div className="capabilities-wrap container">
+            <ul className="capabilities" aria-label="Hizmet alanları">
+              {services.map((service) => (
+                <li key={service}>{service}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+        <ServicesSection />
+        <ClimateSelection />
+        <InstallationSection />
+        <CommercialSection />
+        <FaqSection />
+        <ContactCta />
       </main>
-    </div>
+      <SiteFooter />
+    </>
   );
 }

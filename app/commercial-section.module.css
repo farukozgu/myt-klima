@@ -1,0 +1,113 @@
+.section {
+  padding-block: 128px;
+  background: #eef2f3;
+  color: var(--navy);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  grid-template-areas: "media content";
+  align-items: center;
+  gap: clamp(40px, 5vw, 72px);
+}
+
+.content { grid-area: content; }
+.eyebrow {
+  margin: 0 0 22px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  line-height: 1.5;
+}
+.content h2 {
+  margin: 0;
+  font-size: clamp(36px, 3.3vw, 46px);
+  font-weight: 600;
+  letter-spacing: -.045em;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+.description {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.details {
+  margin: 28px 0 0;
+  border-top: 1px solid #ced8dc;
+}
+.detail { padding-block: 17px; border-bottom: 1px solid #ced8dc; }
+.detail dt {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  line-height: 1.6;
+}
+.detail dd {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.cta {
+  display: inline-flex;
+  min-height: 48px;
+  max-width: 100%;
+  align-items: center;
+  gap: 24px;
+  margin-top: 22px;
+  padding-block: 10px;
+  border-bottom: 1px solid var(--primary);
+  color: var(--primary-hover);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+.cta:hover { color: var(--navy); border-color: var(--navy); }
+.cta:focus-visible { outline: 2px solid var(--primary); outline-offset: 6px; }
+
+.media { grid-area: media; min-width: 0; margin: 0; }
+.mediaSurface {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid #d3dde0;
+  border-radius: 7px;
+  background: #e0e7e9;
+}
+.mediaSurface > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+.media figcaption {
+  margin-top: 18px;
+  padding-left: 14px;
+  border-left: 2px solid var(--primary);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .09em;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .section { padding-block: 80px; }
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "content" "media";
+    gap: 40px;
+  }
+  .content { max-width: 640px; }
+  .content h2 { max-width: 560px; font-size: clamp(36px, 5.5vw, 44px); }
+}
+@media (max-width: 480px) {
+  .section { padding-block: 72px; }
+  .media figcaption { font-size: 11px; letter-spacing: .06em; }
+}

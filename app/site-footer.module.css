@@ -1,0 +1,55 @@
+.footer {
+  padding-top: 64px;
+  border-top: 1px solid rgb(197 209 215 / 14%);
+  background: #0b2232;
+  color: #b9c7cf;
+}
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, .85fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 56px);
+  padding-bottom: 56px;
+}
+.wordmark { display: inline-flex; flex-direction: column; align-items: flex-start; color: #f7f8f6; }
+.logo { font-size: 30px; font-weight: 700; letter-spacing: -.075em; line-height: 1; }
+.logo > span, .descriptor > span { color: #82b9d2; }
+.descriptor { margin-top: 4px; font-size: 9px; font-weight: 600; letter-spacing: .12em; line-height: 1.5; }
+.descriptor > span { padding-inline: 2px; }
+.brand p {
+  max-width: 275px;
+  margin: 22px 0 0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.columns h2 { margin: 2px 0 18px; color: #f7f8f6; font-size: 12px; font-weight: 600; letter-spacing: .09em; line-height: 1.6; }
+.links { margin: 0; padding: 0; list-style: none; }
+.links a { display: inline-block; padding-block: 7px; font-size: 14px; line-height: 1.6; }
+.footer a { overflow-wrap: anywhere; transition: color 150ms ease; }
+.footer a:hover { color: #9cc8de; }
+.footer a:focus-visible { outline: 2px solid #9cc8de; outline-offset: 4px; }
+.contact { font-style: normal; }
+.contact p { margin: 14px 0 0; font-size: 14px; line-height: 1.8; overflow-wrap: anywhere; }
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding-block: 22px;
+  border-top: 1px solid rgb(197 209 215 / 16%);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.bottom p { margin: 0; }
+.legal { display: flex; gap: 24px; }
+.legal a { display: inline-flex; align-items: center; min-height: 36px; }
+@media (max-width: 900px) {
+  .columns { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+}
+@media (max-width: 560px) {
+  .footer { padding-top: 48px; }
+  .columns { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-bottom: 40px; }
+  .columns h2 { margin-bottom: 12px; }
+  .links a { padding-block: 11px; }
+  .bottom { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .legal a { min-height: 44px; }
+}

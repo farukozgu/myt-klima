@@ -1,0 +1,90 @@
+.section {
+  padding-block: 128px;
+  background: var(--background);
+  color: var(--navy);
+}
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
+  align-items: start;
+  gap: clamp(48px, 6vw, 88px);
+}
+.eyebrow {
+  margin: 0 0 22px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .105em;
+  line-height: 1.5;
+}
+.intro h2 {
+  max-width: 400px;
+  margin: 0;
+  font-size: clamp(34px, 3vw, 40px);
+  font-weight: 600;
+  letter-spacing: -.04em;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+.description {
+  max-width: 390px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.accordion { border-top: 1px solid var(--border); }
+.item { border-bottom: 1px solid var(--border); }
+.question { margin: 0; }
+.trigger {
+  display: flex;
+  width: 100%;
+  min-height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 25px 4px;
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -.02em;
+  line-height: 1.45;
+  text-align: left;
+  cursor: pointer;
+  transition: color 140ms ease;
+}
+.trigger > span:first-child { min-width: 0; }
+.trigger[aria-expanded="true"] { color: var(--primary-hover); }
+.trigger:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+.indicator {
+  flex: 0 0 20px;
+  color: var(--primary);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+.answer {
+  max-width: 620px;
+  margin: 0;
+  padding: 0 44px 28px 4px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+@media (hover: hover) {
+  .trigger:hover { color: var(--primary-hover); }
+}
+@media (max-width: 820px) {
+  .section { padding-block: 80px; }
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .intro h2 { max-width: 480px; }
+  .description { max-width: 560px; }
+}
+@media (max-width: 480px) {
+  .section { padding-block: 72px; }
+  .trigger { gap: 16px; font-size: 18px; }
+  .answer { padding-right: 4px; }
+}
