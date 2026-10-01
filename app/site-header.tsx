@@ -2,16 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { getWhatsAppHref } from "./business";
-
-const quoteMessage = "Merhaba Erhan Bey, klima için bilgi ve teklif almak istiyorum.";
+import { getWhatsAppHref, quoteMessage } from "./business";
 
 const navigation = [
   { label: "Ana Sayfa", href: "/" },
   { label: "Klimalar", href: "/klimalar" },
   { label: "Hizmetler", href: "/hizmetler" },
   { label: "VRF Sistemleri", href: "/vrf-sistemleri" },
-  { label: "Projeler", href: "/projeler" },
   { label: "Hakkımızda", href: "/hakkimizda" },
   { label: "İletişim", href: "/iletisim" },
 ];

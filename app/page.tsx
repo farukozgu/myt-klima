@@ -7,10 +7,7 @@ import CommercialSection from "./commercial-section";
 import FaqSection from "./faq-section";
 import ContactCta from "./contact-cta";
 import SiteFooter from "./site-footer";
-import WhatsAppIcon from "./whatsapp-icon";
-import { getWhatsAppHref } from "./business";
-
-const quoteMessage = "Merhaba Erhan Bey, klima için bilgi ve teklif almak istiyorum.";
+import { getWhatsAppHref, quoteMessage } from "./business";
 
 const services = [
   "Klima Satışı",
@@ -45,15 +42,6 @@ export default function Home() {
                   rel="noreferrer"
                 >
                   Teklif Al
-                </a>
-                <a
-                  className="button button-secondary"
-                  href={getWhatsAppHref(quoteMessage)}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <WhatsAppIcon className="whatsapp-icon" />
-                  WhatsApp’tan Yaz
                 </a>
               </div>
               <p className="service-line">

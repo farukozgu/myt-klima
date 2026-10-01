@@ -1,0 +1,41 @@
+.hero { padding-block: 72px 84px; background: var(--background); }
+.heroInner { max-width: 900px; margin-left: max(var(--page-gutter), calc((100vw - var(--content-width)) / 2)); }
+.eyebrow { margin: 0 0 18px; color: var(--primary); font-size: 12px; font-weight: 600; letter-spacing: .105em; line-height: 1.5; }
+.hero h1, .sectionIntro h2, .introductionCopy h2, .finalCta h2 { margin: 0; color: var(--navy); font-weight: 600; letter-spacing: -.045em; line-height: 1.12; text-wrap: balance; }
+.hero h1 { max-width: 790px; font-size: clamp(46px, 5vw, 68px); }
+.hero p:not(.eyebrow) { max-width: 690px; margin: 22px 0 0; color: var(--muted); font-size: 17px; line-height: 1.75; }
+.hero p + p { margin-top: 13px; }
+.introduction { padding-block: 48px 104px; background: var(--surface); }
+.introductionGrid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); align-items: center; gap: clamp(44px, 6vw, 88px); }
+.figure { margin: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: #e5e8e5; }
+.figure img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; }
+.introductionCopy h2, .sectionIntro h2, .finalCta h2 { font-size: clamp(33px, 3.1vw, 45px); }
+.introductionCopy p:not(.eyebrow), .finalCta p { margin: 20px 0 0; color: var(--muted); font-size: 16px; line-height: 1.78; }
+.introductionCopy p + p { margin-top: 13px; }
+.approach { padding-block: 88px; background: #edf2f3; }
+.sectionIntro { max-width: 650px; }
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 47px 0 0; padding: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); list-style: none; }
+.steps li { min-width: 0; padding: 28px clamp(18px, 2.4vw, 32px) 31px; }
+.steps li + li { border-left: 1px solid var(--border); }
+.steps span { color: var(--primary); font-size: 13px; font-weight: 700; letter-spacing: .08em; }
+.steps h3 { margin: 39px 0 0; color: var(--navy); font-size: 14px; font-weight: 700; letter-spacing: .06em; line-height: 1.5; }
+.steps p { margin: 13px 0 0; color: var(--muted); font-size: 14px; line-height: 1.72; }
+.areas { padding-block: 96px; background: var(--background); }
+.areaList { margin: 45px 0 0; border-top: 1px solid var(--border); }
+.areaList > div { display: grid; grid-template-columns: minmax(190px, .55fr) minmax(0, 1.45fr); gap: 32px; padding: 23px 0; border-bottom: 1px solid var(--border); }
+.areaList dt { color: var(--navy); font-size: 14px; font-weight: 700; letter-spacing: .07em; line-height: 1.5; }
+.areaList dd { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
+.contactActions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.contactActions a { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; gap: 10px; padding: 11px 19px; border: 1px solid transparent; border-radius: var(--radius); color: white; font-size: 15px; font-weight: 600; line-height: 1.4; transition: background-color 150ms ease, border-color 150ms ease; }
+.contactActions a:focus-visible { outline: 3px solid #9cc8de; outline-offset: 4px; }
+.contactActions svg { width: 21px; height: 21px; flex: 0 0 21px; }
+.whatsapp { background: #147d49; }.whatsapp:hover { background: #106b3e; }
+.phone { border-color: #7893a2 !important; background: var(--navy); }.phone:hover { border-color: var(--navy) !important; background: #183b53; }
+.finalCta { padding-block: 90px; background: var(--navy); color: #f7f8f6; }
+.finalCtaInner { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(270px, .8fr); align-items: center; gap: clamp(40px, 6vw, 84px); }
+.finalCta h2 { max-width: 650px; color: #f7f8f6; }
+.finalCta p { max-width: 610px; color: #c5d1d7; }
+.finalCta .contactActions { margin: 0; padding-left: clamp(28px, 3vw, 48px); border-left: 2px solid #5da1c3; }
+.finalCta .phone { background: transparent; }.finalCta .phone:hover { background: rgb(255 255 255 / 5%); }
+@media (max-width: 900px) { .heroInner { margin-inline: auto; } .introductionGrid, .finalCtaInner { grid-template-columns: minmax(0, 1fr); } .introductionGrid { gap: 40px; } .figure { max-width: 760px; } .finalCta .contactActions { max-width: 620px; padding-left: clamp(28px, 3vw, 48px); } .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } .steps li:nth-child(3) { border-left: 0; border-top: 1px solid var(--border); } .steps li:nth-child(4) { border-top: 1px solid var(--border); } }
+@media (max-width: 600px) { .hero { padding-block: 53px 64px; } .eyebrow { margin-bottom: 17px; font-size: 10px; } .hero h1 { font-size: clamp(38px, 10.5vw, 48px); } .hero p:not(.eyebrow) { margin-top: 19px; font-size: 16px; } .introduction { padding-block: 32px 68px; } .figure img { aspect-ratio: 4 / 3; } .approach, .areas, .finalCta { padding-block: 68px; } .steps { grid-template-columns: minmax(0, 1fr); margin-top: 36px; } .steps li, .steps li + li { padding: 23px 0; border-left: 0; border-top: 1px solid var(--border); } .steps li:first-child { border-top: 0; } .steps h3 { margin-top: 16px; } .areaList { margin-top: 35px; } .areaList > div { grid-template-columns: minmax(0, 1fr); gap: 7px; padding: 20px 0; } .finalCta .contactActions { padding: 0; border-left: 0; } .contactActions { flex-direction: column; } .contactActions a { width: 100%; } .finalCtaInner { gap: 34px; } }

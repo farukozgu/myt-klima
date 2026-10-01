@@ -8,6 +8,9 @@ export const business = {
   whatsappHref: "https://wa.me/905427983156",
 } as const;
 
+export const quoteMessage =
+  "Merhaba Erhan Bey, klima hakkında bilgi ve teklif almak istiyorum.";
+
 export function getWhatsAppHref(message: string) {
   return `${business.whatsappHref}?${new URLSearchParams({ text: message }).toString()}`;
 }
