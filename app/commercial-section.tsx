@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./commercial-section.module.css";
+import Reveal from "./reveal";
 
 const details = [
   {
@@ -21,7 +22,7 @@ export default function CommercialSection() {
   return (
     <section className={styles.section} aria-labelledby="commercial-title">
       <div className={`container ${styles.layout}`}>
-        <div className={styles.content}>
+        <Reveal><div className={styles.content}>
           <p className={styles.eyebrow}>TİCARİ SİSTEMLER</p>
           <h2 id="commercial-title">
             Birden fazla alan için daha kontrollü iklimlendirme.
@@ -44,8 +45,8 @@ export default function CommercialSection() {
             <span>VRF Sistemlerini İncele</span>
             <span aria-hidden="true">↗</span>
           </Link>
-        </div>
-        <figure className={styles.media}>
+        </div></Reveal>
+        <Reveal variant="imageReveal"><figure className={styles.media}>
           <div className={styles.mediaSurface}>
             <Image
               src="/images/vrf-commercial.png"
@@ -56,7 +57,7 @@ export default function CommercialSection() {
             />
           </div>
           <figcaption>VRF / TİCARİ İKLİMLENDİRME</figcaption>
-        </figure>
+        </figure></Reveal>
       </div>
     </section>
   );

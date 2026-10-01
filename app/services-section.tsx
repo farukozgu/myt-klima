@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "./reveal";
 
 const services = [
   {
@@ -31,7 +32,7 @@ export default function ServicesSection() {
   return (
     <section className="services-section" id="hizmetler" aria-labelledby="services-title">
       <div className="services-layout container">
-        <div className="services-intro">
+        <Reveal><div className="services-intro">
           <p className="eyebrow">HİZMETLER</p>
           <h2 id="services-title">Klima işi sadece montajdan ibaret değil.</h2>
           <p className="services-description">
@@ -49,8 +50,8 @@ export default function ServicesSection() {
               sizes="(max-width: 480px) calc(100vw - 40px), (max-width: 820px) calc(100vw - 48px), 432px"
             />
           </div>
-        </div>
-        <ul className="services-list">
+        </div></Reveal>
+        <Reveal variant="stagger"><ul className="services-list">
           {services.map((service) => (
             <li className="service-row" key={service.name}>
               <div>
@@ -62,7 +63,7 @@ export default function ServicesSection() {
               </svg>
             </li>
           ))}
-        </ul>
+        </ul></Reveal>
       </div>
     </section>
   );

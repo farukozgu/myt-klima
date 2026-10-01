@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./site-footer.module.css";
 import { business } from "./business";
+import Reveal from "./reveal";
 
 const services = [
   { label: "Klima Satışı", href: "/klimalar" },
@@ -9,6 +10,11 @@ const services = [
   { label: "Teknik Servis", href: "/hizmetler#teknik-servis" },
   { label: "VRF Sistemleri", href: "/vrf-sistemleri" },
   { label: "Keşif ve Projelendirme", href: "/hizmetler#kesif-ve-projelendirme" },
+];
+
+const maintenanceServices = [
+  { label: "Su Tesisatı Bakımı", href: "/hizmetler#tesisat-bakim" },
+  { label: "Doğalgaz Tesisatı Bakımı", href: "/hizmetler#tesisat-bakim" },
 ];
 
 const pages = [
@@ -23,7 +29,7 @@ const pages = [
 export default function SiteFooter() {
   return (
     <footer className={styles.footer}>
-      <div className="container">
+      <Reveal><div className="container">
         <div className={styles.columns}>
           <div className={styles.brand}>
             <Link className={styles.wordmark} href="/" aria-label="MYT Klima ana sayfa">
@@ -36,6 +42,12 @@ export default function SiteFooter() {
             <h2 id="footer-services-title">HİZMETLER</h2>
             <ul className={styles.links}>
               {services.map((item) => (
+                <li key={item.label}><Link href={item.href}>{item.label}</Link></li>
+              ))}
+            </ul>
+            <p className={styles.serviceGroup}>TESİSAT BAKIMI</p>
+            <ul className={styles.links}>
+              {maintenanceServices.map((item) => (
                 <li key={item.label}><Link href={item.href}>{item.label}</Link></li>
               ))}
             </ul>
@@ -71,7 +83,7 @@ export default function SiteFooter() {
             <Link href="/kvkk">KVKK</Link>
           </nav>
         </div>
-      </div>
+      </div></Reveal>
     </footer>
   );
 }

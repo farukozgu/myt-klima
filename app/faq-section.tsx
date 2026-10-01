@@ -2,6 +2,7 @@
 
 import { useId, useState } from "react";
 import styles from "./faq-section.module.css";
+import Reveal from "./reveal";
 
 const questions = [
   {
@@ -41,15 +42,15 @@ export default function FaqSection() {
   return (
     <section className={styles.section} aria-labelledby={`${id}-title`}>
       <div className={`container ${styles.layout}`}>
-        <div className={styles.intro}>
+        <Reveal><div className={styles.intro}>
           <p className={styles.eyebrow}>SIK SORULAN SORULAR</p>
           <h2 id={`${id}-title`}>Klima almadan önce akla takılanlar.</h2>
           <p className={styles.description}>
             Doğru cihazı seçmekten montaj yerine kadar birkaç detay sonucu
             doğrudan etkileyebilir. En sık karşılaştığımız soruları burada topladık.
           </p>
-        </div>
-        <div className={styles.accordion}>
+        </div></Reveal>
+        <Reveal variant="stagger"><div className={styles.accordion}>
           {questions.map((item, index) => {
             const isOpen = openIndex === index;
             const triggerId = `${id}-question-${index}`;
@@ -78,7 +79,7 @@ export default function FaqSection() {
               </div>
             );
           })}
-        </div>
+        </div></Reveal>
       </div>
     </section>
   );

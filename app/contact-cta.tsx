@@ -1,6 +1,7 @@
 import styles from "./contact-cta.module.css";
 import WhatsAppIcon from "./whatsapp-icon";
 import { business, getWhatsAppHref } from "./business";
+import Reveal from "./reveal";
 
 const contactMessage = "Merhaba Erhan Bey, klima hakkında bilgi almak istiyorum.";
 
@@ -16,7 +17,7 @@ export default function ContactCta() {
   return (
     <section className={styles.section} id="iletisim" aria-labelledby="contact-cta-title">
       <div className={`container ${styles.layout}`}>
-        <div className={styles.copy}>
+        <Reveal><div className={styles.copy}>
           <p className={styles.eyebrow}>İLETİŞİM</p>
           <h2 id="contact-cta-title">
             Yeni klima mı düşünüyorsunuz, mevcut cihazda bir sorun mu var?
@@ -25,8 +26,8 @@ export default function ContactCta() {
             Ne yapılması gerektiğinden emin değilseniz, alanı veya cihazdaki
             sorunu kısaca anlatın. Uygun seçeneği birlikte değerlendirelim.
           </p>
-        </div>
-        <div className={styles.actions}>
+        </div></Reveal>
+        <Reveal delay={90}><div className={styles.actions}>
           <div className={styles.buttons}>
             <a
               className={styles.whatsapp}
@@ -49,7 +50,7 @@ export default function ContactCta() {
           <p className={styles.microcopy}>
             Klima seçimi · Montaj · Bakım · Teknik servis · VRF
           </p>
-        </div>
+        </div></Reveal>
       </div>
     </section>
   );

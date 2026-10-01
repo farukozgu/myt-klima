@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import MotionRoot from "./motion-root";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700"],
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="tr"
       className={`${plusJakartaSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col"><MotionRoot />{children}</body>
     </html>
   );
 }

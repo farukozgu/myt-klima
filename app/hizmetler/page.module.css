@@ -35,6 +35,19 @@
 .secondaryFigure { width: min(100%, 970px); margin: clamp(64px, 7vw, 94px) 0 0 auto; }
 .secondaryImage { aspect-ratio: 16 / 8; object-position: center 48%; }
 
+.maintenance { padding-block: clamp(74px, 9vw, 126px); background: #eef3f4; scroll-margin-top: 92px; }
+.maintenanceIntro { max-width: 760px; margin-bottom: clamp(42px, 6vw, 72px); }
+.maintenanceIntro h2 { margin: 0; color: var(--navy); font-size: clamp(32px, 3.4vw, 46px); font-weight: 600; letter-spacing: -.045em; line-height: 1.15; text-wrap: balance; }
+.maintenanceIntro > p:not(.eyebrow) { max-width: 710px; margin: 22px 0 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
+.maintenanceIntro .maintenanceClarification { margin-top: 13px; color: #415963; font-size: 14px; }
+.maintenanceList { border-top: 1px solid #cbd7da; }
+.maintenanceBlock { display: grid; grid-template-columns: minmax(172px, .7fr) minmax(0, 2.2fr); gap: clamp(36px, 7vw, 130px); padding-block: clamp(42px, 6vw, 76px); border-bottom: 1px solid #cbd7da; }
+.maintenanceNote { max-width: 720px; margin: 29px 0 0; padding-left: 17px; border-left: 2px solid #8cb8ca; color: #415963; font-size: 14px; line-height: 1.7; }
+.maintenanceLink { display: inline-block; margin-top: 25px; color: var(--primary); font-size: 15px; font-weight: 600; text-decoration: underline; text-decoration-color: rgb(35 116 154 / 35%); text-underline-offset: 4px; }
+.maintenanceLink:hover { color: var(--primary-hover); text-decoration-color: currentColor; }
+.maintenanceLink span { display: inline-block; margin-left: 4px; transition: transform 160ms ease; }
+.maintenanceLink:hover span { transform: translateX(3px); }
+
 .guidance { padding-block: clamp(68px, 8vw, 108px); background: #eef3f4; }
 .guidanceIntro { max-width: 790px; }
 .guidanceIntro > p:last-child { max-width: 710px; margin: 22px 0 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
@@ -77,6 +90,7 @@
 @media (max-width: 800px) {
   .heroInner { max-width: none; margin-inline: auto; }
   .serviceBlock { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .maintenanceBlock { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .serviceNumber { margin: 0; }
   .serviceNumber span { display: inline; margin: 0 0 0 8px; }
   .scenarios { grid-template-columns: minmax(0, 1fr); }
@@ -100,6 +114,7 @@
   .primaryImage { object-position: 60% center; }
   .secondaryImage { object-position: 64% center; }
   .services { padding-block: 64px; }
+  .maintenance { padding-block: 64px; }
   .sectionIntro h2, .guidance h2, .workflow h2 { font-size: 31px; }
   .serviceBlock { padding-block: 39px; }
   .serviceContent h2 { font-size: 29px; }

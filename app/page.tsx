@@ -1,12 +1,14 @@
 import Image from "next/image";
 import SiteHeader from "./site-header";
 import ServicesSection from "./services-section";
+import MaintenanceSection from "./maintenance-section";
 import ClimateSelection from "./climate-selection";
 import InstallationSection from "./installation-section";
 import CommercialSection from "./commercial-section";
 import FaqSection from "./faq-section";
 import ContactCta from "./contact-cta";
 import SiteFooter from "./site-footer";
+import Reveal from "./reveal";
 import { getWhatsAppHref, quoteMessage } from "./business";
 
 const services = [
@@ -24,7 +26,7 @@ export default function Home() {
       <main id="ana-sayfa">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-intro container">
-            <div className="hero-copy">
+            <Reveal variant="stagger"><div className="hero-copy">
               <p className="eyebrow">MYT KLİMA · İKLİMLENDİRME SİSTEMLERİ</p>
               <h1 id="hero-title">
                 Doğru klima.<br />
@@ -47,10 +49,10 @@ export default function Home() {
               <p className="service-line">
                 Klima satışı, montaj, bakım ve teknik servis.
               </p>
-            </div>
+            </div></Reveal>
           </div>
 
-          <div className="hero-media container">
+          <Reveal variant="imageReveal" delay={160}><div className="hero-media container">
             <Image
               className="hero-image"
               src="/images/myt-klima-hero-technician.png"
@@ -60,17 +62,18 @@ export default function Home() {
               priority
               sizes="(max-width: 680px) calc(100vw - 40px), (max-width: 1020px) calc(100vw - 48px), 1240px"
             />
-          </div>
+          </div></Reveal>
 
-          <div className="capabilities-wrap container">
+          <Reveal delay={220}><div className="capabilities-wrap container">
             <ul className="capabilities" aria-label="Hizmet alanları">
               {services.map((service) => (
                 <li key={service}>{service}</li>
               ))}
             </ul>
-          </div>
+          </div></Reveal>
         </section>
         <ServicesSection />
+        <MaintenanceSection />
         <ClimateSelection />
         <InstallationSection />
         <CommercialSection />

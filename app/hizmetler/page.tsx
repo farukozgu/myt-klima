@@ -19,6 +19,8 @@ const guidanceMessage =
   "Merhaba Erhan Bey, hangi klima hizmetine ihtiyacım olduğunu öğrenmek istiyorum.";
 const contactMessage =
   "Merhaba Erhan Bey, klima hizmetleri hakkında bilgi almak istiyorum.";
+const maintenanceMessage =
+  "Merhaba Erhan Bey, su veya doğalgaz tesisatı bakım hizmeti hakkında bilgi almak istiyorum.";
 
 function PhoneIcon() {
   return (
@@ -199,6 +201,53 @@ export default function ServicesPage() {
                 sizes="(max-width: 680px) calc(100vw - 40px), (max-width: 1020px) calc(100vw - 48px), 970px"
               />
             </figure>
+          </div>
+        </section>
+
+        <section className={styles.maintenance} id="tesisat-bakim" aria-labelledby="maintenance-title">
+          <div className="container">
+            <div className={styles.maintenanceIntro}>
+              <p className={styles.eyebrow}>TESİSAT BAKIM HİZMETLERİ</p>
+              <h2 id="maintenance-title">Daire içi tesisatlarda bakım ve kontrol.</h2>
+              <p>MYT Mühendislik, iklimlendirme hizmetlerinin yanında mevcut su ve doğalgaz tesisatlarında bakım ve kontrol hizmetleri de sunar.</p>
+              <p className={styles.maintenanceClarification}>Bu bölümdeki hizmetler arıza onarımı veya acil müdahale hizmeti değildir.</p>
+            </div>
+
+            <div className={styles.maintenanceList}>
+              <article className={styles.maintenanceBlock} aria-labelledby="water-maintenance-title">
+                <p className={styles.serviceNumber}>01 <span>— SU TESİSATI BAKIMI</span></p>
+                <div className={styles.serviceContent}>
+                  <h2 id="water-maintenance-title">Su Tesisatı Bakımı</h2>
+                  <p>Mevcut su tesisatının genel durumu ve kullanım sırasında bakım gerektirebilecek noktalar değerlendirilir.</p>
+                  <h3>Bakım kapsamında değerlendirilebilecek noktalar</h3>
+                  <ul>
+                    <li>Görünür bağlantı noktalarının kontrolü</li>
+                    <li>Tesisatın genel durumunun değerlendirilmesi</li>
+                    <li>Kullanım kaynaklı bakım ihtiyacının belirlenmesi</li>
+                    <li>Gerekli görülürse sonraki işlem için yönlendirme</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article className={styles.maintenanceBlock} aria-labelledby="gas-maintenance-title">
+                <p className={styles.serviceNumber}>02 <span>— DAİRE İÇİ DOĞALGAZ TESİSATI BAKIMI</span></p>
+                <div className={styles.serviceContent}>
+                  <h2 id="gas-maintenance-title">Daire İçi Doğalgaz Tesisatı Bakımı</h2>
+                  <p>Mevcut doğalgaz tesisatının bakım ve kontrol ihtiyacı, daire içindeki mevcut sistem üzerinden değerlendirilir.</p>
+                  <h3>Bakım yaklaşımı</h3>
+                  <ul>
+                    <li>Mevcut tesisatın genel durumunun gözden geçirilmesi</li>
+                    <li>Görünür bağlantı ve kullanım noktalarının değerlendirilmesi</li>
+                    <li>Bakım ihtiyacının belirlenmesi</li>
+                    <li>Gerekli görülürse uygun sonraki adımın paylaşılması</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <p className={styles.maintenanceNote}>Su ve doğalgaz tesisatı bakım hizmetleri, klima teknik servis hizmetlerinden ayrı kapsamda değerlendirilir. Arıza onarımı veya acil müdahale hizmeti olarak sunulmaz.</p>
+            <a className={styles.maintenanceLink} href={getWhatsAppHref(maintenanceMessage)} target="_blank" rel="noreferrer">
+              Bakım hakkında bilgi al <span aria-hidden="true">→</span>
+            </a>
           </div>
         </section>
 

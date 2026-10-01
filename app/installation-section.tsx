@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./installation-section.module.css";
+import Reveal from "./reveal";
 
 const considerations = [
   {
@@ -73,17 +74,17 @@ export default function InstallationSection() {
   return (
     <section className={styles.section} aria-labelledby="installation-title">
       <div className="container">
-        <header className={styles.intro}>
+        <Reveal><header className={styles.intro}>
           <p className={styles.eyebrow}>MONTAJ</p>
           <h2 id="installation-title">İyi bir montaj, cihaz kadar önemlidir.</h2>
           <p className={styles.description}>
             İç ve dış ünitenin konumu, bakır boru hattı, gerekli elektrik bağlantısı
             ve yoğuşma suyunun doğru tahliyesi montajdan önce birlikte planlanır.
           </p>
-        </header>
+        </header></Reveal>
         <div className={styles.layout}>
-          <InstallationVisual />
-          <ol className={styles.considerations}>
+          <Reveal variant="imageReveal"><InstallationVisual /></Reveal>
+          <Reveal variant="stagger"><ol className={styles.considerations}>
             {considerations.map((item, index) => (
               <li className={styles.row} key={item.title}>
                 <span className={styles.number} aria-hidden="true">
@@ -95,7 +96,7 @@ export default function InstallationSection() {
                 </div>
               </li>
             ))}
-          </ol>
+          </ol></Reveal>
         </div>
       </div>
     </section>

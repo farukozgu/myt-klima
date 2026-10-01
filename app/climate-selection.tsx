@@ -1,5 +1,6 @@
 import styles from "./climate-selection.module.css";
 import { getWhatsAppHref } from "./business";
+import Reveal from "./reveal";
 
 const quoteMessage = "Merhaba Erhan Bey, klima için bilgi ve teklif almak istiyorum.";
 
@@ -26,7 +27,7 @@ export default function ClimateSelection() {
   return (
     <section className={styles.section} aria-labelledby="climate-selection-title">
       <div className={`container ${styles.layout}`}>
-        <div className={styles.intro}>
+        <Reveal><div className={styles.intro}>
           <p className={styles.eyebrow}>KLİMA SEÇİMİ</p>
           <h2 id="climate-selection-title">
             Klima seçmek yalnızca BTU seçmek değildir.
@@ -45,8 +46,8 @@ export default function ClimateSelection() {
             <span>Alanınıza uygun klimayı konuşalım</span>
             <span aria-hidden="true">↗</span>
           </a>
-        </div>
-        <div>
+        </div></Reveal>
+        <Reveal variant="stagger"><div>
           <ol className={styles.factors}>
             {factors.map((factor, index) => (
               <li className={styles.factor} key={factor.title}>
@@ -64,7 +65,7 @@ export default function ClimateSelection() {
             Kesin kapasite seçimi, alan ve kullanım koşulları birlikte
             değerlendirilerek yapılmalıdır.
           </p>
-        </div>
+        </div></Reveal>
       </div>
     </section>
   );
