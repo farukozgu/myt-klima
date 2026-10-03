@@ -1,4 +1,7 @@
-import type { Metadata } from "next";
+import JsonLd from "../json-ld";
+import { serviceCatalogSchema } from "../seo";
+import { pageMetadata } from "../seo";
+import Breadcrumbs from "../breadcrumbs";
 import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "../site-footer";
@@ -7,11 +10,7 @@ import WhatsAppIcon from "../whatsapp-icon";
 import { business, getWhatsAppHref } from "../business";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Klima Hizmetleri | MYT Klima",
-  description:
-    "Klima satışı, montaj, bakım, teknik servis, VRF sistemleri, keşif ve projelendirme hizmetleri hakkında bilgi alın.",
-};
+export const metadata = pageMetadata("/hizmetler");
 
 const serviceMessage =
   "Merhaba Erhan Bey, klimamda bir sorun var. Teknik servis hakkında bilgi almak istiyorum.";
@@ -42,14 +41,16 @@ export default function ServicesPage() {
   return (
     <>
       <SiteHeader />
+      <JsonLd data={serviceCatalogSchema} />
       <main>
         <section className={styles.hero} aria-labelledby="services-hero-title">
           <div className={`container ${styles.heroInner}`}>
+            <Breadcrumbs path="/hizmetler" />
             <p className={styles.eyebrow}>HİZMETLER</p>
             <h1 id="services-hero-title">Klima satışı, montajı, bakımı ve teknik servisi.</h1>
             <p className={styles.heroCopy}>
               Yeni bir cihaz seçiminden mevcut klimanızdaki bir soruna kadar, yapılacak işi
-              önce doğru belirlemek gerekiyor. MYT Klima; bireysel ve ticari iklimlendirme
+              önce doğru belirlemek gerekiyor. MYT Klima; İstanbul genelinde bireysel ve ticari iklimlendirme
               ihtiyaçlarında süreci baştan sona ele alır.
             </p>
             <p className={styles.serviceAreas}>Ev <span aria-hidden="true">·</span> Ofis <span aria-hidden="true">·</span> Mağaza <span aria-hidden="true">·</span> Villa <span aria-hidden="true">·</span> Ticari alanlar</p>
@@ -89,7 +90,7 @@ export default function ServicesPage() {
                 <p className={styles.serviceNumber}>01 <span>— KLİMA SATIŞI</span></p>
                 <div className={styles.serviceContent}>
                   <h2 id="klima-satisi-title">Klima Satışı</h2>
-                  <p>Klima seçimini yalnızca metrekareye göre yapmak her zaman doğru sonuç vermez. Alanın kullanım şekli, güneş alma durumu, tavan yüksekliği ve montaj koşulları birlikte değerlendirilmelidir.</p>
+                  <p><Link className="context-link" href="/klimalar">Klima seçimini</Link> yalnızca metrekareye göre yapmak her zaman doğru sonuç vermez. Alanın kullanım şekli, güneş alma durumu, tavan yüksekliği ve montaj koşulları birlikte değerlendirilmelidir.</p>
                   <h3>Bu hizmette neye bakıyoruz?</h3>
                   <ul>
                     <li>Alanın büyüklüğü ve kullanım şekli</li>

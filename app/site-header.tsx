@@ -36,7 +36,7 @@ export default function SiteHeader() {
   return (
     <header className={`site-header${scrolled ? " is-scrolled" : ""}`}>
       <div className="header-inner container">
-        <Link className="wordmark" href="/" aria-label="MYT Klima ana sayfa">
+        <Link className="wordmark" href="/" aria-label="MYT. KLİMA · MÜHENDİSLİK — ana sayfa">
           <span className="wordmark-main">MYT<span>.</span></span>
           <span className="wordmark-sub">KLİMA <span>·</span> MÜHENDİSLİK</span>
         </Link>

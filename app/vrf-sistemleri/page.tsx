@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../seo";
+import Breadcrumbs from "../breadcrumbs";
 import Image from "next/image";
 import SiteFooter from "../site-footer";
 import SiteHeader from "../site-header";
@@ -7,11 +8,7 @@ import { business, getWhatsAppHref } from "../business";
 import VrfFaq from "./vrf-faq";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "VRF Sistemleri | MYT Klima",
-  description:
-    "Çok bölmeli yapılarda VRF sistemleri için keşif, projelendirme, montaj, bakım ve teknik servis.",
-};
+export const metadata = pageMetadata("/vrf-sistemleri");
 
 const heroMessage = "Merhaba Erhan Bey, VRF sistemi hakkında bilgi almak istiyorum.";
 const projectMessage = "Merhaba Erhan Bey, VRF sistemi için proje hakkında bilgi almak istiyorum.";
@@ -48,6 +45,7 @@ export default function VrfPage() {
     <main>
       <section className={styles.hero} aria-labelledby="vrf-title">
         <div className="container">
+          <Breadcrumbs path="/vrf-sistemleri" />
           <p className={styles.eyebrow}>VRF SİSTEMLERİ</p>
           <h1 id="vrf-title">Birden fazla alanı tek sistem üzerinden yönetmek.</h1>
           <p className={styles.heroCopy}>VRF sistemleri, birden fazla iç ünitenin ortak bir dış sistem üzerinden çalışabildiği iklimlendirme çözümleridir. İç ünite tipi, kapasite ve kontrol yapısı binanın kullanımına göre projelendirilir.</p>
@@ -58,7 +56,7 @@ export default function VrfPage() {
 
       <section className={styles.explainer} aria-labelledby="explainer-title">
         <div className={`container ${styles.explainerGrid}`}>
-          <figure className={styles.diagramFigure}><Image src="/images/vrf-system-diagram.png" alt="Çok katlı yapıda VRF sisteminin çalışma mantığını gösteren temsili görsel" width={1536} height={1024} priority sizes="(max-width: 800px) calc(100vw - 40px), 58vw" /></figure>
+          <figure className={styles.diagramFigure}><Image src="/images/vrf-system-diagram.png" alt="Çok katlı yapıda VRF sisteminin çalışma mantığını gösteren temsili görsel" width={1536} height={1024} sizes="(max-width: 680px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 48px), (max-width: 1020px) calc(47vw - 24px), (max-width: 1304px) calc(47vw - 32px), (max-width: 1467px) calc(620px - 3vw), 576px" /></figure>
           <div className={styles.explainerCopy}>
             <p className={styles.eyebrow}>VRF NASIL ÇALIŞIR?</p>
             <h2 id="explainer-title">Bir dış sistem, birden fazla iç alan.</h2>
@@ -79,7 +77,7 @@ export default function VrfPage() {
 
       <section className={styles.units} aria-labelledby="units-title">
         <div className={`container ${styles.unitsGrid}`}>
-          <figure className={styles.unitFigure}><Image src="/images/vrf-cassette-detail.png" alt="Asma tavanda bulunan kaset tipi klima iç ünitesi" width={1536} height={1024} sizes="(max-width: 800px) calc(100vw - 40px), 50vw" /></figure>
+          <figure className={styles.unitFigure}><Image src="/images/vrf-cassette-detail.png" alt="Asma tavanda bulunan kaset tipi klima iç ünitesi" width={1536} height={1024} sizes="(max-width: 680px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 48px), (max-width: 1020px) calc(47vw - 24px), (max-width: 1304px) calc(47vw - 32px), (max-width: 1467px) calc(620px - 3vw), 576px" /></figure>
           <div><p className={styles.eyebrow}>İÇ ÜNİTE SEÇENEKLERİ</p><h2 id="units-title">Projeye göre farklı iç üniteler kullanılabilir.</h2><dl className={styles.unitList}>{indoorUnits.map(([title, text]) => <div key={title}><dt>{title}</dt><dd>{text}</dd></div>)}</dl></div>
         </div>
       </section>

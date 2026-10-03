@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../seo";
+import Breadcrumbs from "../breadcrumbs";
 import Image from "next/image";
 import SiteFooter from "../site-footer";
 import SiteHeader from "../site-header";
@@ -6,11 +7,7 @@ import WhatsAppIcon from "../whatsapp-icon";
 import { business, getWhatsAppHref } from "../business";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Hakkımızda | MYT Klima",
-  description:
-    "MYT Klima; klima satışı, montaj, bakım, teknik servis, VRF sistemleri ve iklimlendirme uygulamaları için hizmet sunar.",
-};
+export const metadata = pageMetadata("/hakkimizda");
 
 const aboutMessage =
   "Merhaba Erhan Bey, MYT Klima hizmetleri hakkında bilgi almak istiyorum.";
@@ -58,9 +55,10 @@ export default function AboutPage() {
       <main>
         <section className={styles.hero} aria-labelledby="about-hero-title">
           <div className={`container ${styles.heroInner}`}>
+            <Breadcrumbs path="/hakkimizda" />
             <p className={styles.eyebrow}>MYT MÜHENDİSLİK</p>
             <h1 id="about-hero-title">İklimlendirme işini baştan sona ele alıyoruz.</h1>
-            <p>MYT Klima; bireysel ve ticari iklimlendirme ihtiyaçlarında klima satışı, montaj, bakım, teknik servis ve VRF sistemleri üzerine çalışır.</p>
+            <p>MYT Klima; İstanbul genelinde bireysel ve ticari iklimlendirme ihtiyaçlarında klima satışı, montaj, bakım, teknik servis ve VRF sistemleri üzerine çalışır.</p>
             <p>Her uygulama aynı olmadığı için önce ihtiyacı, alanı ve montaj koşullarını değerlendirip ardından uygun sistemi veya işlemi belirliyoruz.</p>
           </div>
         </section>

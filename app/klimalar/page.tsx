@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+import Link from "next/link";
+import { pageMetadata } from "../seo";
+import Breadcrumbs from "../breadcrumbs";
 import Image from "next/image";
 import SiteHeader from "../site-header";
 import SiteFooter from "../site-footer";
@@ -8,10 +10,7 @@ import shared from "../vrf-sistemleri/page.module.css";
 import KlimaFaq from "./klima-faq";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Klimalar | MYT Klima",
-  description: "Duvar tipi, salon tipi, kaset tipi ve multi split klima seçeneklerini inceleyin. Alanınıza uygun klima tipini ve kapasiteyi birlikte belirleyin.",
-};
+export const metadata = pageMetadata("/klimalar");
 
 const quoteMessage = "Merhaba Erhan Bey, klima seçimi ve fiyat teklifi hakkında bilgi almak istiyorum.";
 const selectionMessage = "Merhaba Erhan Bey, alanıma uygun klima seçimi hakkında bilgi almak istiyorum.";
@@ -43,9 +42,10 @@ export default function KlimalarPage() {
     <main>
       <section className={`${shared.hero} ${styles.hero}`} aria-labelledby="klimalar-title">
         <div className="container">
+          <Breadcrumbs path="/klimalar" />
           <p className={shared.eyebrow}>KLİMALAR</p>
           <h1 id="klimalar-title">Her alan için aynı klima tipi uygun değildir.</h1>
-          <p className={shared.heroCopy}>Klima seçerken yalnızca kapasiteye değil, alanın kullanımına ve montaj koşullarına da bakmak gerekir. Ev, ofis, mağaza veya daha büyük alanlar için farklı cihaz tipleri değerlendirilebilir.</p>
+          <p className={shared.heroCopy}>Klima seçerken yalnızca kapasiteye değil, alanın kullanımına ve <Link className="context-link" href="/hizmetler#klima-montaji">montaj koşullarına</Link> da bakmak gerekir. Ev, ofis, mağaza veya daha büyük alanlar için farklı cihaz tipleri değerlendirilebilir.</p>
           <a className="button button-primary" href={getWhatsAppHref(quoteMessage)} target="_blank" rel="noreferrer">Klima için teklif al</a>
           <p className={shared.serviceLine}>Duvar tipi · Salon tipi · Kaset tipi · Multi Split</p>
         </div>

@@ -1,0 +1,5 @@
+.breadcrumbs { margin-bottom: 20px; color: var(--muted); font-size: 13px; }
+.breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.breadcrumbs li { display: flex; align-items: center; gap: 10px; }
+.breadcrumbs a { display: inline-flex; align-items: center; min-height: 24px; }
+.breadcrumbs a:hover { text-decoration: underline; text-underline-offset: 3px; }

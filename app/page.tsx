@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { pageMetadata, websiteSchema } from "./seo";
+import JsonLd from "./json-ld";
 import SiteHeader from "./site-header";
 import ServicesSection from "./services-section";
 import MaintenanceSection from "./maintenance-section";
@@ -10,6 +12,8 @@ import ContactCta from "./contact-cta";
 import SiteFooter from "./site-footer";
 import Reveal from "./reveal";
 import { getWhatsAppHref, quoteMessage } from "./business";
+
+export const metadata = pageMetadata("/");
 
 const services = [
   "Klima Satışı",
@@ -23,6 +27,7 @@ export default function Home() {
   return (
     <>
       <SiteHeader />
+      <JsonLd data={websiteSchema} />
       <main id="ana-sayfa">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-intro container">
@@ -47,7 +52,7 @@ export default function Home() {
                 </a>
               </div>
               <p className="service-line">
-                Klima satışı, montaj, bakım ve teknik servis.
+                İstanbul genelinde klima satışı, montaj, bakım ve teknik servis.
               </p>
             </div></Reveal>
           </div>
@@ -59,8 +64,8 @@ export default function Home() {
               alt="Duvar tipi klimaya montaj yapan teknik personel"
               width={2132}
               height={738}
-              priority
-              sizes="(max-width: 680px) calc(100vw - 40px), (max-width: 1020px) calc(100vw - 48px), 1240px"
+              preload
+              sizes="(max-width: 680px) calc(100vw - 40px), (max-width: 1020px) calc(100vw - 48px), (max-width: 1304px) calc(100vw - 64px), 1240px"
             />
           </div></Reveal>
 

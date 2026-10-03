@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Local browser profiles, screenshots and audit scripts are not app source.
+    ".browser-check/**",
+    ".checks/**",
   ]),
 ]);
 

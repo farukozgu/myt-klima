@@ -42,7 +42,7 @@
 }
 .bottom p { margin: 0; }
 .legal { display: flex; gap: 24px; }
-.legal a { display: inline-flex; align-items: center; min-height: 36px; }
+.legal span { display: inline-flex; align-items: center; min-height: 36px; }
 @media (max-width: 900px) {
   .columns { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
 }
@@ -52,5 +52,5 @@
   .columns h2 { margin-bottom: 12px; }
   .links a { padding-block: 11px; }
   .bottom { align-items: flex-start; flex-direction: column; gap: 8px; }
-  .legal a { min-height: 44px; }
+  .legal span { min-height: 44px; }
 }

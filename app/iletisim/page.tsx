@@ -1,15 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../seo";
+import Breadcrumbs from "../breadcrumbs";
 import SiteFooter from "../site-footer";
 import SiteHeader from "../site-header";
 import WhatsAppIcon from "../whatsapp-icon";
 import { business, getWhatsAppHref } from "../business";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "İletişim | MYT Klima",
-  description:
-    "Klima satışı, montaj, bakım, teknik servis ve VRF sistemleri hakkında MYT Klima ile telefon veya WhatsApp üzerinden iletişime geçin.",
-};
+export const metadata = pageMetadata("/iletisim");
 
 const generalMessage =
   "Merhaba Erhan Bey, MYT Klima hizmetleri hakkında bilgi almak istiyorum.";
@@ -32,6 +29,7 @@ export default function ContactPage() {
       <main>
         <section className={styles.hero} aria-labelledby="contact-hero-title">
           <div className="container">
+            <Breadcrumbs path="/iletisim" />
             <p className={styles.eyebrow}>İLETİŞİM</p>
             <h1 id="contact-hero-title">Klima hakkında konuşalım.</h1>
             <p>Klima seçimi, montaj, bakım, teknik servis veya VRF sistemleriyle ilgili bilgi almak için doğrudan ulaşabilirsiniz.</p>
@@ -44,6 +42,7 @@ export default function ContactPage() {
               <p className={styles.eyebrow}>MYT KLİMA · MYT MÜHENDİSLİK</p>
               <h2 id="contact-person-title">{business.contactPerson}</h2>
               <p className={styles.supporting}>Klima satışı, montaj, bakım, teknik servis ve VRF uygulamalarıyla ilgili iletişim.</p>
+              <p className={styles.supporting}>Hizmet bölgesi: {business.serviceArea} geneli</p>
             </div>
             <div className={styles.actions}>
               <p className={styles.actionLabel}>TELEFON</p>

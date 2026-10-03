@@ -1,5 +1,11 @@
 export const business = {
   businessName: "MYT Klima",
+  legalName: "MYT Mühendislik",
+  serviceArea: "İstanbul",
+  country: "Türkiye",
+  language: "tr",
+  locale: "tr_TR",
+  telephone: "+905427983156",
   contactPerson: "Erhan Paltacı",
   phoneDisplay: "0542 798 31 56",
   phoneInternational: "+90 542 798 31 56",

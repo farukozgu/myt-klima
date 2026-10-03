@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./climate-selection.module.css";
 import { getWhatsAppHref } from "./business";
 import Reveal from "./reveal";
@@ -35,7 +36,7 @@ export default function ClimateSelection() {
           <p className={styles.description}>
             Aynı büyüklükteki iki oda her zaman aynı kapasiteye ihtiyaç duymaz.
             Güneş alma süresi, yalıtım, tavan yüksekliği ve alanın nasıl
-            kullanıldığı da doğru klima seçiminde önemlidir.
+            kullanıldığı da doğru <Link className="context-link" href="/klimalar">klima seçiminde</Link> önemlidir.
           </p>
           <a
             className={styles.cta}

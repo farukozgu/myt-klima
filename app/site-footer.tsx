@@ -32,11 +32,11 @@ export default function SiteFooter() {
       <Reveal><div className="container">
         <div className={styles.columns}>
           <div className={styles.brand}>
-            <Link className={styles.wordmark} href="/" aria-label="MYT Klima ana sayfa">
+            <Link className={styles.wordmark} href="/" aria-label="MYT. KLİMA · MÜHENDİSLİK — ana sayfa">
               <span className={styles.logo}>MYT<span>.</span></span>
               <span className={styles.descriptor}>KLİMA <span>·</span> MÜHENDİSLİK</span>
             </Link>
-            <p>Klima satışı, montaj, bakım, teknik servis ve ticari iklimlendirme uygulamaları.</p>
+            <p>İstanbul genelinde klima ve iklimlendirme hizmetleri.</p>
           </div>
           <nav aria-labelledby="footer-services-title">
             <h2 id="footer-services-title">HİZMETLER</h2>
@@ -77,11 +77,10 @@ export default function SiteFooter() {
         </div>
         <div className={styles.bottom}>
           <p>© 2026 MYT Klima. Tüm hakları saklıdır.</p>
-          {/* Reserved routes; legal pages will be added separately. */}
-          <nav className={styles.legal} aria-label="Yasal bilgiler">
-            <Link href="/gizlilik">Gizlilik</Link>
-            <Link href="/kvkk">KVKK</Link>
-          </nav>
+          <div className={styles.legal}>
+            <span>Gizlilik</span>
+            <span>KVKK</span>
+          </div>
         </div>
       </div></Reveal>
     </footer>
