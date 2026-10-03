@@ -71,6 +71,8 @@ export default function SiteFooter() {
                     WhatsApp
                   </a>
                 </li>
+                <li><a href={business.emailHref} aria-label="MYT Klima'ya e-posta gönder">{business.email}</a></li>
+                <li><a href={business.instagram} target="_blank" rel="noopener noreferrer" aria-label="MYT Klima Instagram hesabını aç">{business.instagramHandle}</a></li>
               </ul>
             </address>
           </div>

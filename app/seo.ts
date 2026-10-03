@@ -85,7 +85,7 @@ export const areaServed = { "@type": "City", name: business.serviceArea, contain
 export const organizationSchema = {
   "@context": "https://schema.org", "@type": "Organization", "@id": organizationId,
   name: business.businessName, legalName: business.legalName,
-  url: siteUrl("/"), telephone: business.telephone, areaServed,
+  url: siteUrl("/"), telephone: business.telephone, email: business.email, sameAs: [business.instagram], areaServed,
   contactPoint: { "@type": "ContactPoint", telephone: business.telephone, contactType: "customer service", availableLanguage: business.language, areaServed },
 };
 export const websiteSchema = {

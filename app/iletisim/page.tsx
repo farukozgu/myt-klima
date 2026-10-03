@@ -54,6 +54,16 @@ export default function ContactPage() {
                 </a>
                 <a className={styles.phoneButton} href={business.phoneHref}>Ara</a>
               </div>
+              <dl className={styles.secondaryContacts}>
+                <div>
+                  <dt>E-POSTA</dt>
+                  <dd><a href={business.emailHref} aria-label="MYT Klima'ya e-posta gönder">{business.email}</a></dd>
+                </div>
+                <div>
+                  <dt>INSTAGRAM</dt>
+                  <dd><a href={business.instagram} target="_blank" rel="noopener noreferrer" aria-label="MYT Klima Instagram hesabını aç">{business.instagramHandle}</a></dd>
+                </div>
+              </dl>
             </div>
           </div>
         </section>
