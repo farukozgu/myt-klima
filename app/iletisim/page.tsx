@@ -56,6 +56,10 @@ export default function ContactPage() {
               </div>
               <dl className={styles.secondaryContacts}>
                 <div>
+                  <dt>ADRES</dt>
+                  <dd><a href={business.addressHref} target="_blank" rel="noopener noreferrer">{business.address}</a></dd>
+                </div>
+                <div>
                   <dt>E-POSTA</dt>
                   <dd><a href={business.emailHref} aria-label="MYT Klima'ya e-posta gönder">{business.email}</a></dd>
                 </div>

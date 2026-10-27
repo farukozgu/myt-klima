@@ -30,7 +30,7 @@ Descriptions follow the supplied wording and are centralized in `app/seo.ts`. Ab
 - Production sitemap contains exactly the six public routes. No fabricated modification dates or nonexistent legal routes.
 - Organization schema is global; WebSite schema is on the homepage. Five inner pages have visible breadcrumbs and matching BreadcrumbList schema.
 - `/hizmetler` has an OfferCatalog with eight actual Service entries, an Organization provider reference, and İstanbul service area. Plumbing and natural gas entries describe maintenance/control only. No rich-result eligibility is claimed.
-- **No verified physical address exists in the project. LocalBusiness schema was intentionally not added.** No address, coordinates, hours, ratings, social profiles, certifications, or experience claims were fabricated.
+- The verified address provided by the owner is shown on the Contact page and in the shared footer, with a Google Maps search link. LocalBusiness schema remains absent; no coordinates, hours, ratings, certifications, or experience claims were fabricated.
 
 ## Visible changes and performance
 
@@ -63,7 +63,7 @@ Descriptions follow the supplied wording and are centralized in `app/seo.ts`. Ab
 3. Configure the preferred custom domain and redirects from alternate domains in hosting. The app does not guess the final domain or redirect visitors to an unknown domain.
 4. Add a real `GOOGLE_SITE_VERIFICATION` token and rebuild if using Search Console's HTML-meta verification. **No token is currently configured locally.** Alternatively use Search Console's DNS verification.
 5. Verify the chosen property and submit `/sitemap.xml` in Search Console after deployment. Recheck robots, canonical URLs, social image fetching, and production indexing on the actual domain.
-6. If a verified public physical address becomes available, evaluate LocalBusiness schema then. The illustrative storefront image is not evidence of an address.
+6. The owner-provided address is now visible on the Contact page and in the shared footer. Confirm its public listing and map pin before adding coordinates or richer local-business details.
 7. Existing maintenance-text contrast findings require a separately approved color adjustment. No fake legal pages, reviews, or district pages were added.
 
 ## Files changed

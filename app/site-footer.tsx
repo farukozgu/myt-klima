@@ -65,6 +65,7 @@ export default function SiteFooter() {
             <address className={styles.contact}>
               <ul className={styles.links}>
                 <li>{business.contactPerson}</li>
+                <li><a href={business.addressHref} target="_blank" rel="noopener noreferrer">{business.address}</a></li>
                 <li><a href={business.phoneHref}>{business.phoneDisplay}</a></li>
                 <li>
                   <a href={business.whatsappHref} target="_blank" rel="noreferrer">
