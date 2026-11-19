@@ -1,7 +1,7 @@
 export const business = {
   businessName: "MYT Klima",
-  address: "Aydınlar, Cumhuriyet Cd. 20/B, 34406 Çekmeköy/İstanbul",
-  addressHref: "https://www.google.com/maps/search/?api=1&query=Ayd%C4%B1nlar%2C%20Cumhuriyet%20Cd.%2020%2FB%2C%2034406%20%C3%87ekmek%C3%B6y%2F%C4%B0stanbul",
+  address: "Veysel Karani Mahallesi Yağmur Sokak No:3 Sancaktepe/İstanbul",
+  addressHref: "https://www.google.com/maps/search/?api=1&query=Veysel%20Karani%20Mahallesi%20Ya%C4%9Fmur%20Sokak%20No%3A3%20Sancaktepe%2F%C4%B0stanbul",
   legalName: "MYT Mühendislik",
   serviceArea: "İstanbul",
   country: "Türkiye",
